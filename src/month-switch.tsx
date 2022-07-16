@@ -16,7 +16,7 @@ import {
   dateResource,
 } from './utils';
 import Style from './style';
-import type { Direction, IMonthSwitchProps } from 'src/types';
+import type { Direction, IMonthSwitchProps } from './types';
 
 const MonthSwitch: FC<IMonthSwitchProps> = ({
   format,
