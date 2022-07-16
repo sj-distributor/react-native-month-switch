@@ -85,7 +85,7 @@ export default function App() {
 
 ## Contributing
 
-While developing, you can run the [example app](https://github.com/Simoon-F/react-native-month-switch/example/README.md) to test your changes.
+While developing, you can run the [example app](https://github.com/Simoon-F/react-native-month-switch/blob/master/example/README.md) to test your changes.
 
 Make sure your code passes TypeScript and ESLint. Run the following to verify:
 
