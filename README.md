@@ -1,5 +1,8 @@
 # :rainbow: react-native-month-switch
 
+[![npm version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/react-native-month-switch)
+[![MIT License](https://img.shields.io/npm/l/react-native-tab-view.svg?style=flat-square)](https://www.npmjs.com/package/react-native-month-switch)
+
 A React Native Month Switch Components
 
 ## Installation
