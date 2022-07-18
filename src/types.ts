@@ -1,10 +1,13 @@
 export type Direction = 'left' | 'right';
+import type { StyleProp, ViewStyle } from 'react-native';
 
 export interface IMonthSwitchProps {
   /** To set the date format，can refer to： http://arshaw.com/xdate/#Formatting */
   format?: string;
   /** To set init value, default current month， Format：yyyy-MM or yyyy-MM-dd or MM-yy ...  */
   initValue?: string;
+  /**  Style passed to the arrow */
+  arrowStyle?: StyleProp<ViewStyle>;
   /** Callback function, can be executed when the month is changing    */
   onChange?: (date: DateData) => void;
   /** Callback function, can be executed when the left arrow is click    */

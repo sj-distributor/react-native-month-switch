@@ -20,9 +20,10 @@ import type { Direction, IMonthSwitchProps } from './types';
 
 const MonthSwitch: FC<IMonthSwitchProps> = ({
   format,
+  initValue,
+  arrowStyle,
   onChange,
   onLeftArrow,
-  initValue,
   onRightArrow,
   renderCustomArrow,
 }) => {
@@ -88,7 +89,7 @@ const MonthSwitch: FC<IMonthSwitchProps> = ({
     return (
       <TouchableOpacity
         onPress={onPress}
-        style={styles.current.arrow}
+        style={[styles.current.arrow, arrowStyle]}
         hitSlop={styles.current.arrowHitSlop}
       >
         {renderCustomArrow ? (
@@ -125,6 +126,7 @@ MonthSwitch.propTypes = {
   format: PropTypes.string,
   onLeftArrow: PropTypes.func,
   onRightArrow: PropTypes.func,
+  arrowStyle: PropTypes.object,
   renderCustomArrow: PropTypes.func,
 };
 MonthSwitch.defaultProps = {
