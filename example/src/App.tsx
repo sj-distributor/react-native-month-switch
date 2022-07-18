@@ -16,8 +16,12 @@ export default function App() {
       <MonthSwitch format={'MM-yyyy'} />
 
       <MonthSwitch
+        arrowStyle={{
+          padding: 0,
+        }}
         format={'yyyy-MM'}
         onChange={(dataString: DateData) => {
+          /** {"dateString": "2022-05-18", "day": 18, "month": "05", "year": 2022} */
           console.log(dataString);
         }}
       />
@@ -41,9 +45,11 @@ export default function App() {
           );
         }}
         onLeftArrow={(date: string) => {
+          /** click 2022-07-18 */
           console.log('click', date);
         }}
         onRightArrow={(date: string) => {
+          /** click 2022-06-18 */
           console.log('click', date);
         }}
       />
