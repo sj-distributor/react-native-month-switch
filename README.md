@@ -85,15 +85,15 @@ export default function App() {
 
 ## MonthSwitch Props
 
-| Property          | Type                                              | Optional | Default | Description                                                                                   |
-| ----------------- | ------------------------------------------------- | -------- | ------- | --------------------------------------------------------------------------------------------- |
-| format            | string                                            | no       | yyyy-MM | To set the date format，can refer to：[Formatting](http://arshaw.com/xdate/#Formatting)       |
-| initValue         | string                                            | no       | today   | To set init value, default current month， Format：yyyy-MM or yyyy-MM-dd or MM-yy ...         |
-| arrowStyle        | StyleProp<ViewStyle>                              | no       | -       | Style passed to the arrow, can refer to：[Viewstyle](https://reactnative.dev/docs/view#style) |
-| onChange          | function(dataString: DateData)                    | no       | -       | Callback function, can be executed when the month is changing                                 |
-| onLeftArrow       | function(date:string)                             | no       | -       | Callback function, can be executed when the left arrow is click                               |
-| onRightArrow      | function(date:string)                             | no       | -       | Callback function, can be executed when the right arrow is click                              |
-| renderCustomArrow | function(direction: Direction) => React.ReactNode | no       | -       | Custom arrow icon render method                                                               |
+| Property          | Type                                              | Optional | Default       | Description                                                                                   |
+| ----------------- | ------------------------------------------------- | -------- | ------------- | --------------------------------------------------------------------------------------------- |
+| format            | string                                            | no       | yyyy-MM       | To set the date format，can refer to：[Formatting](http://arshaw.com/xdate/#Formatting)       |
+| initValue         | string                                            | no       | current month | To set init value, default current month                                                      |
+| arrowStyle        | StyleProp<ViewStyle>                              | no       | -             | Style passed to the arrow, can refer to：[Viewstyle](https://reactnative.dev/docs/view#style) |
+| onChange          | function(dataString: DateData)                    | no       | -             | Callback function, can be executed when the month is changing                                 |
+| onLeftArrow       | function(date:string)                             | no       | -             | Callback function, can be executed when the left arrow is click                               |
+| onRightArrow      | function(date:string)                             | no       | -             | Callback function, can be executed when the right arrow is click                              |
+| renderCustomArrow | function(direction: Direction) => React.ReactNode | no       | -             | Custom arrow icon render method                                                               |
 
 ## Contributing
 
