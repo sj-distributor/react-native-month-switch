@@ -1,7 +1,8 @@
 # :rainbow: react-native-month-switch
 
-[![npm version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/react-native-month-switch)
+[![Npm Version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/react-native-month-switch)
 [![MIT License](https://img.shields.io/npm/l/react-native-tab-view.svg?style=flat-square)](https://www.npmjs.com/package/react-native-month-switch)
+[![Build Status](https://github.com/Simoon-F/react-native-month-switch/actions/workflows/pull_request.yml/badge.svg)](https://github.com/Simoon-F/react-native-month-switch/actions/workflows/pull_request.yml)
 
 A React Native Month Switch Components
 
