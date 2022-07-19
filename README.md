@@ -40,8 +40,12 @@ export default function App() {
       <MonthSwitch format={'MM-yyyy'} />
 
       <MonthSwitch
+        arrowStyle={{
+          padding: 0,
+        }}
         format={'yyyy-MM'}
         onChange={(dataString: DateData) => {
+          /** {"dateString": "2022-05-18", "day": 18, "month": "05", "year": 2022} */
           console.log(dataString);
         }}
       />
@@ -65,9 +69,11 @@ export default function App() {
           );
         }}
         onLeftArrow={(date: string) => {
+          /** click 2022-07-18 */
           console.log('click', date);
         }}
         onRightArrow={(date: string) => {
+          /** click 2022-06-18 */
           console.log('click', date);
         }}
       />
@@ -78,15 +84,15 @@ export default function App() {
 
 ## MonthSwitch Props
 
-| Property          | Description                                                                                   | Type                                              | Default | Version |
-| ----------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
-| format            | To set the date format，can refer to：[Formatting](http://arshaw.com/xdate/#Formatting)       | string                                            | -       |         |
-| initValue         | To set init value, default current month， Format：yyyy-MM or yyyy-MM-dd or MM-yy ...         | string                                            | yyyy-MM |         |
-| arrowStyle        | Style passed to the arrow, can refer to：[Viewstyle](https://reactnative.dev/docs/view#style) | StyleProp<ViewStyle>                              | -       |         |
-| onChange          | Callback function, can be executed when the month is changing                                 | function(dataString: DateData)                    | -       |         |
-| onLeftArrow       | Callback function, can be executed when the left arrow is click                               | function(date:string)                             | -       |         |
-| onRightArrow      | Callback function, can be executed when the right arrow is click                              | function(date:string)                             | -       |         |
-| renderCustomArrow | Custom arrow icon render method                                                               | function(direction: Direction) => React.ReactNode | -       |         |
+| Property          | Type                                              | Optional | Default | Description                                                                                   |
+| ----------------- | ------------------------------------------------- | -------- | ------- | --------------------------------------------------------------------------------------------- |
+| format            | string                                            | no       | yyyy-MM | To set the date format，can refer to：[Formatting](http://arshaw.com/xdate/#Formatting)       |
+| initValue         | string                                            | no       | today   | To set init value, default current month， Format：yyyy-MM or yyyy-MM-dd or MM-yy ...         |
+| arrowStyle        | StyleProp<ViewStyle>                              | no       | -       | Style passed to the arrow, can refer to：[Viewstyle](https://reactnative.dev/docs/view#style) |
+| onChange          | function(dataString: DateData)                    | no       | -       | Callback function, can be executed when the month is changing                                 |
+| onLeftArrow       | function(date:string)                             | no       | -       | Callback function, can be executed when the left arrow is click                               |
+| onRightArrow      | function(date:string)                             | no       | -       | Callback function, can be executed when the right arrow is click                              |
+| renderCustomArrow | function(direction: Direction) => React.ReactNode | no       | -       | Custom arrow icon render method                                                               |
 
 ## Contributing
 
