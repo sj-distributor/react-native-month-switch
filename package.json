@@ -128,10 +128,12 @@
     ]
   },
   "dependencies": {
+    "@types/react-test-renderer": "^17.0.0",
     "@types/xdate": "^0.8.32",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "react-test-renderer": "^17.0.0",
     "xdate": "^0.8.2"
   }
 }
