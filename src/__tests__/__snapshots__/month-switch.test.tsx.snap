@@ -118,7 +118,7 @@ exports[`MonthSwitch should not render <MonthSwitch /> and compare with snapshot
 </View>
 `;
 
-exports[`MonthSwitch should render <MonthSwitch /> and compare with snapshot 1`] = `
+exports[`MonthSwitch should render <MonthSwitch  /> and compare with snapshot 1`] = `
 <View
   accessibilityRole="adjustable"
   style={

@@ -11,7 +11,7 @@ describe('MonthSwitch', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should render <MonthSwitch /> and compare with snapshot', () => {
+  it('should render <MonthSwitch  /> and compare with snapshot', () => {
     const tree = renderer.create(<MonthSwitch format={'MM-yyyy'} />).toJSON();
 
     expect(tree).toMatchSnapshot();
