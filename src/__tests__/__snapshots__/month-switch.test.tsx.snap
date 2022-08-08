@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonthSwitch should not render <MonthSwitch /> and compare with snapshot 1`] = `
+<View
+  accessibilityRole="adjustable"
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingLeft": 10,
+      "paddingRight": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "right": 20,
+        "top": 20,
+      }
+    }
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/images/left.png",
+        }
+      }
+      style={
+        Object {
+          "tintColor": "#3874f6",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Object {
+          "color": "#2d4150",
+          "fontFamily": "System",
+          "fontSize": 16,
+          "fontWeight": "300",
+          "margin": 10,
+        }
+      }
+    >
+      2022-08
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "right": 20,
+        "top": 20,
+      }
+    }
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/images/right.png",
+        }
+      }
+      style={
+        Object {
+          "tintColor": "#3874f6",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`MonthSwitch should render <MonthSwitch  /> and compare with snapshot 1`] = `
+<View
+  accessibilityRole="adjustable"
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingLeft": 10,
+      "paddingRight": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "right": 20,
+        "top": 20,
+      }
+    }
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/images/left.png",
+        }
+      }
+      style={
+        Object {
+          "tintColor": "#3874f6",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Object {
+          "color": "#2d4150",
+          "fontFamily": "System",
+          "fontSize": 16,
+          "fontWeight": "300",
+          "margin": 10,
+        }
+      }
+    >
+      08-2022
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "right": 20,
+        "top": 20,
+      }
+    }
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/images/right.png",
+        }
+      }
+      style={
+        Object {
+          "tintColor": "#3874f6",
+        }
+      }
+    />
+  </View>
+</View>
+`;
