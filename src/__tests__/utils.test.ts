@@ -20,7 +20,7 @@ it('should test if date type change string type format', () => {
   expect(dateToStringFormat(date)).toBe('2022-08-08');
 });
 
-it('should test if give number make uo zero', () => {
+it('should test if give number make up zero', () => {
   const n: number = 6;
 
   expect(makeUpZero(n)).toBe('06');
