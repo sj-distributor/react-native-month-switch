@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-import { Image, View } from 'react-native';
+import { Button, Image, View } from 'react-native';
 import { MonthSwitch, DateData } from 'react-native-month-switch';
+import type { IMonthSwitchRef } from 'src/types';
 
 export default function App() {
+  const monthSwitchRef = useRef<IMonthSwitchRef>(null);
+
   return (
     <View
       style={{
@@ -26,7 +29,15 @@ export default function App() {
         }}
       />
 
+      <Button
+        title="On ref reset ⬇️"
+        onPress={() => {
+          monthSwitchRef?.current?.reset();
+        }}
+      />
+
       <MonthSwitch
+        ref={monthSwitchRef}
         format={'MM-yyyy'}
         renderCustomArrow={(direction: string) => {
           const arrowImage =
@@ -45,11 +56,9 @@ export default function App() {
           );
         }}
         onLeftArrow={(date: string) => {
-          /** click 2022-07-18 */
           console.log('click', date);
         }}
         onRightArrow={(date: string) => {
-          /** click 2022-06-18 */
           console.log('click', date);
         }}
       />
