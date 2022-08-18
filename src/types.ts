@@ -2,6 +2,7 @@ export type Direction = 'left' | 'right';
 import type { StyleProp, ViewStyle } from 'react-native';
 
 export interface IMonthSwitchProps {
+  ref?: React.Ref<any>;
   /** To set the date format，can refer to： http://arshaw.com/xdate/#Formatting */
   format?: string;
   /** To set init value, default current month， Format：yyyy-MM or yyyy-MM-dd or MM-yy ...  */
@@ -24,3 +25,7 @@ export type DateData = {
   day: number | string;
   month: number | string;
 };
+
+export interface IMonthSwitchRef {
+  reset: () => void;
+}
