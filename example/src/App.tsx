@@ -16,7 +16,8 @@ export default function App() {
     >
       <MonthSwitch />
 
-      <MonthSwitch format={'MM-yyyy'} />
+      {/* Set max date */}
+      <MonthSwitch format={'MM-yyyy'} maxDate={'2022-08'} />
 
       <MonthSwitch
         arrowStyle={{
