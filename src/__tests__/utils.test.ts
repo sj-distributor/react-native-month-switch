@@ -2,10 +2,19 @@ import XDate from 'xdate';
 import {
   dateResource,
   dateToStringFormat,
+  isLeftMonthBig,
   isSameMonth,
   makeUpZero,
   parseDate,
 } from '../utils';
+
+it('should test is a month LTE b month', () => {
+  const dateA = new XDate('2022-08-18');
+  const dateB = new XDate('2022-08-19');
+
+  expect(isLeftMonthBig(dateA, dateB)).toBe(true);
+  expect(!isLeftMonthBig(dateA, dateB)).toBe(false);
+});
 
 it('should test is same month', () => {
   const dateA = new XDate();
