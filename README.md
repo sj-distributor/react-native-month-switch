@@ -38,7 +38,8 @@ export default function App() {
     >
       <MonthSwitch />
 
-      <MonthSwitch format={'MM-yyyy'} />
+      {/* Set max date */}
+      <MonthSwitch format={'MM-yyyy'} maxDate={'2022-08'} />
 
       <MonthSwitch
         arrowStyle={{
@@ -54,7 +55,7 @@ export default function App() {
       <Button
         title="On ref reset ⬇️"
         onPress={() => {
-          monthSwitchRef?.current?.reset();
+          monthSwitchRef.current?.reset();
         }}
       />
 
@@ -96,6 +97,7 @@ export default function App() {
 | ref               | React.Ref<any>                                    | no       | -             | Ref                                                                                           |
 | format            | string                                            | no       | yyyy-MM       | To set the date format，can refer to：[Formatting](http://arshaw.com/xdate/#Formatting)       |
 | initValue         | string                                            | no       | current month | To set init value, default current month                                                      |
+| maxDate           | string                                            | no       | -             | Max date that can be switch                                                                   |
 | arrowStyle        | StyleProp<ViewStyle>                              | no       | -             | Style passed to the arrow, can refer to：[Viewstyle](https://reactnative.dev/docs/view#style) |
 | onChange          | function(dataString: DateData)                    | no       | -             | Callback function, can be executed when the month is changing                                 |
 | onLeftArrow       | function(date:string)                             | no       | -             | Callback function, can be executed when the left arrow is click                               |
