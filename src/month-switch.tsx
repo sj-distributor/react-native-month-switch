@@ -15,6 +15,7 @@ import {
   parseDate,
   isSameMonth,
   dateResource,
+  isLeftMonthBig,
 } from './utils';
 import Style from './style';
 import type { Direction, IMonthSwitchProps, IMonthSwitchRef } from './types';
@@ -23,6 +24,7 @@ const MonthSwitch = forwardRef<IMonthSwitchRef, IMonthSwitchProps>(
   (props, ref) => {
     const {
       format,
+      maxDate,
       onChange,
       initValue,
       arrowStyle,
@@ -71,11 +73,13 @@ const MonthSwitch = forwardRef<IMonthSwitchRef, IMonthSwitchProps>(
       (count: number, onArrowChange?: (date: string) => void) => {
         const newMonth = currentMonth.clone().addMonths(count, true);
 
-        updateCurrentMonth(newMonth);
+        if (maxDate && isLeftMonthBig(newMonth, new XDate(maxDate))) {
+          updateCurrentMonth(newMonth);
 
-        onArrowChange && onArrowChange(dateToStringFormat(newMonth));
+          onArrowChange && onArrowChange(dateToStringFormat(newMonth));
+        }
       },
-      [currentMonth, updateCurrentMonth]
+      [currentMonth, maxDate, updateCurrentMonth]
     );
 
     const _onLeftArrow = useCallback(() => {
@@ -139,6 +143,7 @@ MonthSwitch.displayName = 'MonthSwitch';
 MonthSwitch.propTypes = {
   format: PropTypes.string,
   onChange: PropTypes.func,
+  maxDate: PropTypes.string,
   initValue: PropTypes.string,
   onLeftArrow: PropTypes.func,
   onRightArrow: PropTypes.func,

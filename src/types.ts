@@ -7,6 +7,8 @@ export interface IMonthSwitchProps {
   format?: string;
   /** To set init value, default current month， Format：yyyy-MM or yyyy-MM-dd or MM-yy ...  */
   initValue?: string;
+  /** Max date that can be switch */
+  maxDate?: string;
   /**  Style passed to the arrow */
   arrowStyle?: StyleProp<ViewStyle>;
   /** Callback function, can be executed when the month is changing    */
