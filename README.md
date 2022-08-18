@@ -51,7 +51,15 @@ export default function App() {
         }}
       />
 
+      <Button
+        title="On ref reset ⬇️"
+        onPress={() => {
+          monthSwitchRef?.current?.reset();
+        }}
+      />
+
       <MonthSwitch
+        ref={monthSwitchRef}
         format={'MM-yyyy'}
         renderCustomArrow={(direction: string) => {
           const arrowImage =
@@ -70,11 +78,9 @@ export default function App() {
           );
         }}
         onLeftArrow={(date: string) => {
-          /** click 2022-07-18 */
           console.log('click', date);
         }}
         onRightArrow={(date: string) => {
-          /** click 2022-06-18 */
           console.log('click', date);
         }}
       />
@@ -87,6 +93,7 @@ export default function App() {
 
 | Property          | Type                                              | Optional | Default       | Description                                                                                   |
 | ----------------- | ------------------------------------------------- | -------- | ------------- | --------------------------------------------------------------------------------------------- |
+| ref               | React.Ref<any>                                    | no       | -             | Ref                                                                                           |
 | format            | string                                            | no       | yyyy-MM       | To set the date format，can refer to：[Formatting](http://arshaw.com/xdate/#Formatting)       |
 | initValue         | string                                            | no       | current month | To set init value, default current month                                                      |
 | arrowStyle        | StyleProp<ViewStyle>                              | no       | -             | Style passed to the arrow, can refer to：[Viewstyle](https://reactnative.dev/docs/view#style) |
@@ -94,6 +101,12 @@ export default function App() {
 | onLeftArrow       | function(date:string)                             | no       | -             | Callback function, can be executed when the left arrow is click                               |
 | onRightArrow      | function(date:string)                             | no       | -             | Callback function, can be executed when the right arrow is click                              |
 | renderCustomArrow | function(direction: Direction) => React.ReactNode | no       | -             | Custom arrow icon render method                                                               |
+
+## MonthSwitch Ref
+
+| function | Description                        |
+| -------- | ---------------------------------- |
+| reset    | Reset to init date or today's date |
 
 ## Contributing
 
