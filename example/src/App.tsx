@@ -32,7 +32,7 @@ export default function App() {
       <Button
         title="On ref reset ⬇️"
         onPress={() => {
-          monthSwitchRef?.current?.reset();
+          monthSwitchRef.current?.reset();
         }}
       />
 
