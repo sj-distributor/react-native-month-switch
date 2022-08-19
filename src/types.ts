@@ -11,6 +11,8 @@ export interface IMonthSwitchProps {
   maxDate?: string;
   /**  Style passed to the arrow */
   arrowStyle?: StyleProp<ViewStyle>;
+  /**  Triggered when maxdate condition is met */
+  maxDateTrigger?: (b: boolean) => void;
   /** Callback function, can be executed when the month is changing    */
   onChange?: (date: DateData) => void;
   /** Callback function, can be executed when the left arrow is click    */

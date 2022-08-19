@@ -30,6 +30,7 @@ const MonthSwitch = forwardRef<IMonthSwitchRef, IMonthSwitchProps>(
       arrowStyle,
       onLeftArrow,
       onRightArrow,
+      maxDateTrigger,
       renderCustomArrow,
     } = props;
 
@@ -77,9 +78,11 @@ const MonthSwitch = forwardRef<IMonthSwitchRef, IMonthSwitchProps>(
           updateCurrentMonth(newMonth);
 
           onArrowChange && onArrowChange(dateToStringFormat(newMonth));
+        } else {
+          maxDateTrigger && maxDateTrigger(true);
         }
       },
-      [currentMonth, maxDate, updateCurrentMonth]
+      [currentMonth, maxDate, maxDateTrigger, updateCurrentMonth]
     );
 
     const _onLeftArrow = useCallback(() => {
@@ -148,6 +151,7 @@ MonthSwitch.propTypes = {
   onLeftArrow: PropTypes.func,
   onRightArrow: PropTypes.func,
   arrowStyle: PropTypes.object,
+  maxDateTrigger: PropTypes.func,
   renderCustomArrow: PropTypes.func,
 };
 MonthSwitch.defaultProps = {
