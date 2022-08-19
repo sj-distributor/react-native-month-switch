@@ -23,12 +23,15 @@ npm install react-native-month-switch
 ## Usage
 
 ```ts
-import React from 'react';
+import React, { useRef } from 'react';
 
-import { Image, View } from 'react-native';
+import { Button, Image, View } from 'react-native';
 import { MonthSwitch, DateData } from 'react-native-month-switch';
+import type { IMonthSwitchRef } from 'src/types';
 
 export default function App() {
+  const monthSwitchRef = useRef<IMonthSwitchRef>(null);
+
   return (
     <View
       style={{
