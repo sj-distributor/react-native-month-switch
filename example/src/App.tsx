@@ -18,8 +18,8 @@ export default function App() {
 
       {/* Set max date */}
       <MonthSwitch
-        format={'MM-yyyy'}
-        maxDate={'2022-08'}
+        format={'yyyy年MM月'}
+        maxDate={'2022-08-19'}
         maxDateTrigger={(b: boolean) => {
           console.log(b, 'trigger');
         }}
@@ -44,8 +44,8 @@ export default function App() {
       />
 
       <MonthSwitch
-        ref={monthSwitchRef}
         format={'MM-yyyy'}
+        ref={monthSwitchRef}
         renderCustomArrow={(direction: string) => {
           const arrowImage =
             direction === 'left'
