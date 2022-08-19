@@ -17,7 +17,13 @@ export default function App() {
       <MonthSwitch />
 
       {/* Set max date */}
-      <MonthSwitch format={'MM-yyyy'} maxDate={'2022-08'} />
+      <MonthSwitch
+        format={'MM-yyyy'}
+        maxDate={'2022-08'}
+        maxDateTrigger={(b: boolean) => {
+          console.log(b, 'trigger');
+        }}
+      />
 
       <MonthSwitch
         arrowStyle={{
