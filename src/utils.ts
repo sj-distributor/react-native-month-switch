@@ -6,7 +6,7 @@ function isXDateType(date: any) {
 }
 
 export function isLeftMonthBig(dateA: XDate, dateB: XDate) {
-  return dateA.diffMonths(dateB) > -1;
+  return dateA.diffMonths(dateB) >= -1;
 }
 
 export function isSameMonth(dateA?: XDate, dateB?: XDate) {
