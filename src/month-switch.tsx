@@ -74,13 +74,14 @@ const MonthSwitch = forwardRef<IMonthSwitchRef, IMonthSwitchProps>(
       (count: number, onArrowChange?: (date: string) => void) => {
         const newMonth = currentMonth.clone().addMonths(count, true);
 
-        if (maxDate && isLeftMonthBig(newMonth, new XDate(maxDate))) {
-          updateCurrentMonth(newMonth);
-
-          onArrowChange && onArrowChange(dateToStringFormat(newMonth));
-        } else {
+        if (maxDate && !isLeftMonthBig(newMonth, new XDate(maxDate))) {
           maxDateTrigger && maxDateTrigger(true);
+          return;
         }
+
+        updateCurrentMonth(newMonth);
+
+        onArrowChange && onArrowChange(dateToStringFormat(newMonth));
       },
       [currentMonth, maxDate, maxDateTrigger, updateCurrentMonth]
     );
